@@ -1,0 +1,57 @@
+<html>
+    <head>
+		<style>body {
+			font-family: Arial, Helvetica, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			}
+			
+			table {
+			border-collapse:collapse;
+			caption-side: bottom;
+			}
+			
+			caption {text-align:left;}
+			
+			td, th {
+			border: 1px solid #ddd;
+			padding: 8px;
+			}
+			
+			tbody tr {text-align: center;}
+			
+			tr:nth-child(even){background-color: #f2f2f2;}
+			
+			tr:hover {background-color: #ddd;}
+			
+			th {
+			padding-top: 12px;
+			padding-bottom: 12px;
+			text-align: center;
+			background-color: #15331c;
+			color: white;
+			}
+		</style>
+        <title>CWCAP Salmon Survey Report</title>
+	</head>
+    <body>
+		<img src="https://www.carkeekwatershed.org/wp-content/uploads/CWCAPlogo-1.png" width="213" height="72">
+        <h2>CWCAP Salmon Survey Report</h2>
+        <h4>generated {{reportGenTime}}</h4>
+        <h3>Survey Totals</h3>
+        {{surveyTotals}}
+		<h3>Yearly Totals</h3>
+		{{yearlyTotalsTable}}
+		{% if reddsTable is not none %}   
+			<h3>Redds by location</h3>
+			{{reddsTable}}
+		{% endif %}
+		{{countPlot}}
+		{{yearByYearCountPlot}}
+		{{mostRecentScatterMap}}
+		{{yearScatterMap}}
+		{% for pieChart in pieCharts %}
+			{{pieChart}}
+		{% endfor %}
+	</body>
+</html>
