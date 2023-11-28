@@ -60,9 +60,13 @@
 
 		  @media print {
 			.col-md-6 {
-			float: left;
-			width: 50%;
-		  }
+			  float: left;
+			  width: 50%;
+		    }
+			a {
+		      color: black;
+			  text-decoration: none;
+			}
 }
 		</style>
 	</head>
@@ -70,13 +74,15 @@
 		<div class="container">
 			<header class="row">
 				<div class="col-md-8">
-					<h1>CWCAP Salmon Survey Report</h1>
+					<h1>Salmon Survey Report</h1>
+					<h4>Carkeek Watershed Community Action Project</h4>
+					<a href="https://www.carkeekwatershed.org">carkeekwatershed.org</a>
 				</div>
 				<div class="col-md-4 text-right">
 					<img class="d-print-none" src="https://www.carkeekwatershed.org/wp-content/uploads/CWCAPlogo-1.png" alt="CWCAP Logo">
 				</div>
 			</header>
-			<h5>generated {{reportGenTime}}</h5>
+			<h6>generated {{reportGenTime}}</h6>
 			{% if surveyStatsTable is not none %}  
 				<div style="overflow-x:auto;">
 					{{surveyStatsTable}}
