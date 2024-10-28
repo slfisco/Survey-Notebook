@@ -149,5 +149,29 @@
 					{% endif %}	
 				</div>
 		</div>
+			<div class="row">
+				<div class="col-md-6">
+					{% if chumFemaleSpawnSuccess is not none %}
+						{{chumFemaleSpawnSuccess}}
+					{% endif %}
+				</div>
+				<div class="col-md-6">
+					{% if chumMaleSpawnSuccess is not none %}
+						{{chumMaleSpawnSuccess}}
+					{% endif %}	
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					{% if chumPredation is not none %}
+						{{chumPredation}}
+					{% endif %}
+				</div>
+				<div class="col-md-6">
+					{% if cohoPredation is not none %}
+						{{cohoPredation}}
+					{% endif %}	
+				</div>
+			</div>
 	</body>
 </html>
